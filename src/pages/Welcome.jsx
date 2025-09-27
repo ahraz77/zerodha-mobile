@@ -25,7 +25,7 @@ export default function App() {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-semibold mb-16 xs:mb-20 sm:mb-24 md:mb-32 leading-tight tracking-tight" style={{ color: '#43434f' }}>
+          <h1 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-semibold mb-16 xs:mb-20 sm:mb-24 md:mb-32 leading-tight tracking-tight" style={{ color: '#43434f' }}>
             Welcome to<br />
             Kite by Zerodha
           </h1>
