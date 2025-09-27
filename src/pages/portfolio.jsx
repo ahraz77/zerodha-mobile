@@ -154,14 +154,14 @@ function PortfolioPage() {
       <div className="px-4 mt-3">
         {tab === 'holdings' ? (
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <Icon name="search" className="w-6 h-6 text-[#2563eb]" />
-              <Icon name="sliders" className="w-6 h-6 text-[#2563eb]" />
-              <button className="inline-flex items-center gap-2 rounded-md bg-[#EEF2F7] px-3 py-1.5"><span className="text-[16px] font-medium text-[#2563eb]">Equity</span><Icon name="chevron-down" className="w-4 h-4 text-[#2563eb]" /></button>
+            <div className="flex items-center gap-3">
+              <Icon name="search" className="w-4 h-4 text-[#2563eb]" />
+              <Icon name="sliders" className="w-4 h-4 text-[#2563eb]" />
+              <button className="inline-flex items-center gap-1 rounded-md bg-[#EEF2F7] px-2 py-0.5"><span className="text-[13px] font-medium text-[#2563eb]">Equity</span><Icon name="chevron-down" className="w-3 h-3 text-[#2563eb]" /></button>
             </div>
-            <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2 text-[#2563eb]"><Icon name="users" className="w-6 h-6 text-[#2563eb]" /><span className="text-[16px]">Family</span></div>
-              <div className="flex items-center gap-2 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-6 h-6" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[16px]">Analytics</span></div>
+            <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1 text-[#2563eb]"><Icon name="users" className="w-4 h-4 text-[#2563eb]" /><span className="text-[13px]">Family</span></div>
+              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
             </div>
           </div>
         ) : (
