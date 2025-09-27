@@ -3,73 +3,67 @@ import { ArrowRight, User as UserIcon, LogIn } from "lucide-react";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-neutral-800 antialiased">
-      {/* iPhone style container with larger scaling */}
-      <div className="max-w-sm mx-auto scale-110 origin-top">
-        {/* Top bar */}
-        <header className="px-4 pt-6 flex items-center justify-end">
-          <button
-            className="inline-flex items-center gap-2 border border-[#3b82f6] text-[#3b82f6] rounded-md px-6 py-2 text-base font-normal hover:bg-blue-50 transition"
-            aria-label="Try demo"
-          >
-            <span className="tracking-wide">Try demo</span>
-            <ArrowRight className="h-4 w-4" aria-hidden="true" />
-          </button>
-        </header>
+    <div className="min-h-[100dvh] bg-white overflow-hidden mobile-viewport-fix">
+      {/* Universal mobile container - fits all devices from 320px to 430px+ */}
+      <div className="max-w-mobile mx-auto bg-white w-full min-h-[100dvh] relative mobile-viewport-fix">
+        <main className="px-4 xs:px-5 sm:px-6 pt-4 xs:pt-5 sm:pt-6 pb-4 min-h-full flex flex-col safe-area-insets">
+          {/* Try demo button */}
+          <div className="flex justify-end mb-12 xs:mb-14 sm:mb-16 md:mb-20">
+            <button className="inline-flex items-center gap-1.5 xs:gap-2 border border-blue-500 text-blue-500 rounded px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-2.5 sm:py-3 text-xs xs:text-sm font-normal hover:bg-blue-50 active:bg-blue-100 transition-colors touch-manipulation">
+              Try demo
+              <ArrowRight className="h-3.5 w-3.5 xs:h-4 xs:w-4" />
+            </button>
+          </div>
 
-        <main className="px-4 pt-4">
-          {/* Brand mark */}
-          <div className="mb-10 flex justify-start">
+          {/* Kite logo */}
+          <div className="mb-6 xs:mb-8 sm:mb-10 md:mb-12">
             <img
               src="https://kite.zerodha.com/static/images/kite-logo.svg"
               alt="Kite by Zerodha logo"
-              className="w-16 h-16 select-none"
+              className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 select-none"
             />
           </div>
 
-          {/* Heading */}
-          <h1 className="text-3xl leading-tight tracking-tight font-semibold text-neutral-900 mb-10">
-            <span className="block">Welcome to</span>
-            <span className="block">Kite by Zerodha</span>
+          {/* Main heading */}
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-semibold mb-16 xs:mb-20 sm:mb-24 md:mb-32 leading-tight tracking-tight" style={{ color: '#43434f' }}>
+            Welcome to<br />
+            Kite by Zerodha
           </h1>
 
-          {/* Options list */}
-          <nav aria-label="Primary">
-            <ul className="rounded-2xl overflow-hidden border-t border-b border-neutral-200">
-              <ListItem
-                label="Continue signup"
-                iconRight={<UserIcon className="h-6 w-6 text-neutral-500" aria-hidden="true" />}
-                onClick={() => {}}
-              />
-              <div className="h-px bg-neutral-200" />
-              <ListItem
-                label="Login to Kite"
-                iconRight={<LogIn className="h-6 w-6 text-neutral-500" aria-hidden="true" />}
-                onClick={() => {}}
-              />
-            </ul>
+          {/* Action buttons */}
+          <nav className="border-t border-b border-gray-200 mb-12 xs:mb-14 sm:mb-16 md:mb-20 flex-shrink-0">
+            <ListItem
+              label="Continue signup"
+              iconRight={<UserIcon className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-500" />}
+              onClick={() => {}}
+            />
+            <div className="h-px bg-gray-200"></div>
+            <ListItem
+              label="Login to Kite"
+              iconRight={<LogIn className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-500" />}
+              onClick={() => {}}
+            />
           </nav>
 
           {/* Footer */}
-          <footer className="mt-16 pb-16">
-            <div className="flex items-center gap-3 mb-4">
-              {/* Only Zerodha logo in #808080 color */}
+          <footer className="pb-4 xs:pb-6 sm:pb-8 mt-auto flex-shrink-0">
+            <div className="flex items-center mb-2 xs:mb-3 sm:mb-4">
               <img
                 src="https://zerodha.com/static/images/logo.svg"
                 alt="Zerodha logo"
-                className="h-6 select-none"
+                className="h-3 xs:h-3.5 sm:h-4 select-none"
                 style={{ filter: 'invert(37%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(93%) contrast(89%)' }}
               />
             </div>
-            <div className="text-sm leading-relaxed text-neutral-500">
-              <p className="mb-2">
+            <div className="text-xs text-gray-500 leading-relaxed">
+              <p className="mb-1.5 xs:mb-2 text-xs leading-relaxed break-words">
                 NSE & BSE – SEBI Registration no.: INZ000031633 | MCX - SEBI Registration no.: INZ000038238 | CDSL – SEBI Registration no.: IN-DP-431-2019
               </p>
-              <p className="flex flex-wrap gap-x-3 gap-y-1">
-                <FooterLink href="#" text="Smart Online Dispute Resolution" />
-                <span className="text-neutral-300">|</span>
-                <FooterLink href="#" text="SEBI SCORES" />
-              </p>
+              <div className="flex flex-wrap items-center gap-1 xs:gap-1.5 sm:gap-2 text-xs">
+                <a href="#" className="underline underline-offset-2">Smart Online Dispute Resolution</a>
+                <span>|</span>
+                <a href="#" className="underline underline-offset-2">SEBI SCORES</a>
+              </div>
             </div>
           </footer>
         </main>
@@ -80,25 +74,12 @@ export default function App() {
 
 function ListItem({ label, iconRight, onClick }) {
   return (
-    <li className="border-0">
-      <button
-        onClick={onClick}
-        className="w-full flex items-center justify-between px-5 py-6 text-left hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
-      >
-        <span className="text-lg text-neutral-500">{label}</span>
-        <span>{iconRight}</span>
-      </button>
-    </li>
-  );
-}
-
-function FooterLink({ href, text }) {
-  return (
-    <a
-      href={href}
-      className="underline underline-offset-4 decoration-neutral-300 text-neutral-500 hover:decoration-blue-400 hover:text-neutral-700 transition"
+    <button
+      onClick={onClick}
+      className="w-full flex items-center justify-between px-0 py-4 xs:py-5 sm:py-6 text-left hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors active:bg-gray-100 touch-manipulation min-h-[44px]"
     >
-      {text}
-    </a>
+      <span className="text-sm xs:text-base sm:text-lg text-gray-600 font-normal">{label}</span>
+      {iconRight}
+    </button>
   );
 }
