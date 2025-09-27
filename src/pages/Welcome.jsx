@@ -1,7 +1,18 @@
 import React from "react";
 import { ArrowRight, User as UserIcon, LogIn } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
+  const handleSignupClick = () => {
+    navigate('/signup');
+  };
+
   return (
     <div className="min-h-[100dvh] bg-white overflow-hidden mobile-viewport-fix">
       {/* Universal mobile container - fits all devices from 320px to 430px+ */}
@@ -35,13 +46,13 @@ export default function App() {
             <ListItem
               label="Continue signup"
               iconRight={<UserIcon className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-500" />}
-              onClick={() => {}}
+              onClick={handleSignupClick}
             />
             <div className="h-px bg-gray-200"></div>
             <ListItem
               label="Login to Kite"
               iconRight={<LogIn className="h-4 w-4 xs:h-5 xs:w-5 sm:h-6 sm:w-6 text-gray-500" />}
-              onClick={() => {}}
+              onClick={handleLoginClick}
             />
           </nav>
 
