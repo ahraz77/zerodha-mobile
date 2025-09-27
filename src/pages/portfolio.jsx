@@ -161,15 +161,15 @@ function PortfolioPage() {
             </div>
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2 text-[#2563eb]"><Icon name="users" className="w-6 h-6 text-[#2563eb]" /><span className="text-[16px]">Family</span></div>
-              <div className="flex items-center gap-2 text-[#2563eb]"><Icon name="pie-chart" className="w-6 h-6 text-[#2563eb]" /><span className="text-[16px]">Analytics</span></div>
+              <div className="flex items-center gap-2 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-6 h-6" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[16px]">Analytics</span></div>
             </div>
           </div>
         ) : (
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4"><Icon name="search" className="w-6 h-6 text-[#2563eb]" /><Icon name="sliders" className="w-6 h-6 text-[#2563eb]" /></div>
             <div className="flex items-center gap-6">
-              <button className="inline-flex items-center gap-2 text-[#1f2937]"><span className="inline-flex items-center justify-center w-7 h-7 rounded-md bg-[#f97316] shadow-sm"><Icon name="activity" className="w-[18px] h-[18px] text-white" /></span><span className="text-[16px]">Analyze</span></button>
-              <div className="flex items-center gap-2 text-[#2563eb]"><Icon name="pie-chart" className="w-7 h-7 text-[#2563eb]" /><span className="text-[16px]">Analytics</span></div>
+              <button className="inline-flex items-center gap-2 text-[#1f2937]"><img src="/images/analyze.png" className="w-[23px] h-[23px]" style={{ mixBlendMode: 'multiply' }} alt="Analyze" /><span className="text-[16px]">Analyze</span></button>
+              <div className="flex items-center gap-2 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-7 h-7" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[16px]">Analytics</span></div>
             </div>
           </div>
         )}
@@ -727,7 +727,14 @@ export default function App() {
         </button>
         {/* Bids */}
         <button onClick={()=>setActive('bids')} className={`flex flex-col items-center justify-center text-[12px] ${active==='bids'?'text-[#2563eb]':'text-[#6b7280]'}`}>
-          <GavelIcon className={`w-7 h-7 ${active==='bids'?'text-[#2563eb]':'text-[#2f3542]'}`} />
+          <img 
+            src={active === 'bids' ? '/images/bids_blue.jpg' : '/images/bids.jpg'}
+            className="w-[26px] h-[26px]"
+            style={{ 
+              mixBlendMode: 'multiply'
+            }} 
+            alt="Bids" 
+          />
           <span className="mt-1">Bids</span>
         </button>
         {/* User */}
