@@ -122,15 +122,15 @@ function PortfolioPage() {
 
       {/* Tabs */}
       <div className="px-4 mt-3">
-        <div className="flex items-center justify-center gap-6 text-[20px] font-medium text-[#334155]">
+        <div className="flex items-center justify-center gap-6 text-[16px] font-medium text-[#334155]">
           <button onClick={() => setTab('holdings')} className={`relative pb-2 transition-colors ${tab === 'holdings' ? 'text-[#3D73F1]' : ''}`}>
             <span className="align-middle">Holdings</span>
-            <span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[14px] ${tab === 'holdings' ? 'bg-[#dbeafe] text-[#3D73F1]' : 'bg-[#e5e7eb] text-[#475569]'}`}>17</span>
+            <span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[11px] ${tab === 'holdings' ? 'bg-[#dbeafe] text-[#3D73F1]' : 'bg-[#e5e7eb] text-[#475569]'}`}>17</span>
             {tab === 'holdings' && <span className="absolute -bottom-[3px] left-0 w-10 h-[3px] bg-[#3D73F1] rounded-full" />}
           </button>
           <button onClick={() => setTab('positions')} className={`relative pb-2 transition-colors ${tab === 'positions' ? 'text-[#3D73F1]' : ''}`}>
             <span>Positions</span>
-            <span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[14px] ${tab === 'positions' ? 'bg-[#dbeafe] text-[#3D73F1]' : 'bg-[#e5e7eb] text-[#475569]'}`}>8</span>
+            <span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[11px] ${tab === 'positions' ? 'bg-[#dbeafe] text-[#3D73F1]' : 'bg-[#e5e7eb] text-[#475569]'}`}>8</span>
             {tab === 'positions' && <span className="absolute -bottom-[3px] left-0 w-10 h-[3px] bg-[#3D73F1] rounded-full" />}
           </button>
         </div>
@@ -139,11 +139,11 @@ function PortfolioPage() {
       {/* Summary card (changes per tab) */}
       <section className="px-4 mt-4">
         {tab === 'holdings' ? (
-          <div className="bg-white rounded-[16px] shadow-sm px-4 sm:px-5 py-4 sm:py-5">
-            <div className="flex items-center justify-between text-[16px] text-[#6b7280]"><span>Invested</span><span>Current</span></div>
-            <div className="mt-2 flex items-center justify-between text-[28px] font-medium text-[#111827]"><span>13,228.55</span><span>15,758.71</span></div>
+          <div className="bg-white rounded-[12px] shadow-sm px-4 py-4">
+            <div className="flex items-center justify-between text-[13px] text-[#6b7280]"><span>Invested</span><span>Current</span></div>
+            <div className="mt-2 flex items-center justify-between text-[22px] font-medium text-[#111827]"><span>13,228.55</span><span>15,758.71</span></div>
             <div className="mt-3 h-[1px] bg-[#eef1f5]" />
-            <div className="mt-3 flex items-center justify-between"><span className="text-[18px] text-[#6b7280]">P&L</span><div className="flex items-center gap-3 text-[22px] font-medium text-[#34C759]"><span>+2,530.16</span><span className="inline-flex items-center px-3 py-1 rounded-[999px] text-[16px] bg-[#EAF7EE] text-[#34C759]">+19.13%</span></div></div>
+            <div className="mt-3 flex items-center justify-between"><span className="text-[14px] text-[#6b7280]">P&L</span><div className="flex items-center gap-2 text-[17px] font-medium text-[#34C759]"><span>+2,530.16</span><span className="inline-flex items-center px-2 py-0.5 rounded-[999px] text-[13px] bg-[#EAF7EE] text-[#34C759]">+19.13%</span></div></div>
           </div>
         ) : (
           <div className="bg-white rounded-[16px] shadow-md px-4 sm:px-6 py-5 sm:py-6 text-center"><div className="text-[18px] leading-6 text-[#9aa3af]">Total P&L</div><div className="mt-2 text-[34px] leading-8 font-semibold text-[#D04C4C]">-273.75</div></div>
@@ -205,7 +205,7 @@ function PortfolioPage() {
 
       {/* Fixed Day's P&L bar (only on holdings) */}
       {tab === 'holdings' && (
-        <div className="fixed inset-x-0 [bottom:calc(64px+env(safe-area-inset-bottom))] h-[44px] bg-white border-t border-[#eef1f5] flex items-center justify-between px-4"><span className="text-[16px] text-[#6b7280]">Day's P&L</span><span className="text-[18px] font-medium text-[#34C759] tracking-wide">+35.70 <span className="ml-2">+0.23 %</span></span></div>
+        <div className="fixed inset-x-0 [bottom:calc(64px+env(safe-area-inset-bottom))] h-[44px] bg-white border-t border-[#eef1f5] flex items-center justify-between px-4"><span className="text-[16px] text-[#6b7280]">Day's P&L</span><span className="text-[16px] font-medium text-[#34C759] tracking-wide">+35.70 <span className="ml-2 text-[14px]">+0.23 %</span></span></div>
       )}
     </div>
   );
