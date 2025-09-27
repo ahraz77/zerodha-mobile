@@ -9,6 +9,7 @@ import LicensesPage from './pages/license.jsx'
 import InviteFriends from './pages/invite_frds.jsx'
 import FundsPage from './pages/Funds.jsx'
 import SettingsPage from './pages/settings.jsx'
+import PortfolioPage from './pages/portfolio.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="/invite-friends" element={<InviteFriends />} />
         <Route path="/funds" element={<FundsPage />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
       </Routes>
     </Router>
   </React.StrictMode>,
