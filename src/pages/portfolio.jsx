@@ -105,7 +105,7 @@ const wlMyList = [
 
 // ---------- Portfolio Page ----------
 function PortfolioPage() {
-  const [tab, setTab] = useState('positions');
+  const [tab, setTab] = useState('holdings');
 
   return (
     <div className="flex flex-col min-h-screen bg-[#f7f8fa] pb-[calc(64px+env(safe-area-inset-bottom))] select-none">
@@ -325,7 +325,11 @@ function OrdersPage() {
     <div className="px-4 mt-3">
       <div
         className="flex items-center gap-6 text-[18px] font-medium text-[#374151] overflow-x-auto whitespace-nowrap -mx-4 px-4"
-        style={{ WebkitOverflowScrolling: 'touch' }}
+        style={{ 
+          WebkitOverflowScrolling: 'touch',
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none'
+        }}
       >
         {([
           { k: 'open', l: 'Open', n: 6 },
