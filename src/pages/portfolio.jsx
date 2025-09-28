@@ -166,10 +166,13 @@ function PortfolioPage() {
           </div>
         ) : (
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4"><Icon name="search" className="w-6 h-6 text-[#2563eb]" /><Icon name="sliders" className="w-6 h-6 text-[#2563eb]" /></div>
-            <div className="flex items-center gap-6">
-              <button className="inline-flex items-center gap-2 text-[#1f2937]"><img src="/images/analyze.png" className="w-[23px] h-[23px]" style={{ mixBlendMode: 'multiply' }} alt="Analyze" /><span className="text-[16px]">Analyze</span></button>
-              <div className="flex items-center gap-2 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-7 h-7" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[16px]">Analytics</span></div>
+            <div className="flex items-center gap-4">
+              <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
+              <Icon name="sliders" className="w-5 h-5 text-[#2563eb]" />
+            </div>
+            <div className="flex items-center gap-4">
+              <button className="inline-flex items-center gap-1 text-[#2563eb]"><img src="/images/analyze.png" className="w-[18px] h-[18px]" style={{ mixBlendMode: 'multiply' }} alt="Analyze" /><span className="text-[13px]">Analyze</span></button>
+              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-5 h-5" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
             </div>
           </div>
         )}
