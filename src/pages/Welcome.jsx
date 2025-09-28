@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, User as UserIcon, LogIn } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import InstallPrompt from "../components/InstallPrompt.jsx";
 
 export default function App() {
   const navigate = useNavigate();
@@ -85,6 +86,7 @@ export default function App() {
           </footer>
         </main>
       </div>
+      <InstallPrompt />
     </div>
   );
 }
