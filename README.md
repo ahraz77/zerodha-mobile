@@ -1,6 +1,6 @@
-# Kite by Zerodha - PWA Mobile App
+# Kite - PWA Mobile App
 
-A Progressive Web App (PWA) clone of Zerodha's Kite mobile interface, built with React, Vite, and Tailwind CSS.
+A Progressive Web App (PWA) with Kite's trading interface, built with React, Vite, and Tailwind CSS.
 
 ## 🚀 PWA Features
 
@@ -31,7 +31,7 @@ This app includes full Progressive Web App functionality:
 
 ### On Mobile (iOS/Android):
 1. Open the app in your mobile browser (Safari, Chrome, etc.)
-2. Look for the "Install Kite App" prompt at the bottom
+2. Look for the "Install Kite" prompt at the bottom
 3. Tap "Install" or use browser's "Add to Home Screen" option
 4. The app will be added to your home screen like a native app
 

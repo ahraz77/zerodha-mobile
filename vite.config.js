@@ -10,9 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
       manifest: {
-        name: 'Kite by Zerodha',
+        name: 'Kite',
         short_name: 'Kite',
-        description: 'Mobile trading app by Zerodha',
+        description: 'Trading made simple with Kite',
         theme_color: '#387adf',
         background_color: '#ffffff',
         display: 'standalone',

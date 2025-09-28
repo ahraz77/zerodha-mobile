@@ -79,10 +79,10 @@ const InstallPrompt = () => {
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="text-sm font-medium text-gray-900 mb-1">
-              Install Kite App
+              Install Kite
             </h3>
             <p className="text-xs text-gray-500 mb-3">
-              Add Kite to your home screen for quick access and a better experience.
+              Add Kite to your home screen for quick access and a better trading experience.
             </p>
             <div className="flex space-x-2">
               <button

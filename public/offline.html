@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kite by Zerodha - Offline</title>
+    <title>Kite - Offline</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
@@ -24,14 +24,12 @@
             width: 64px;
             height: 64px;
             margin: 0 auto 1.5rem;
-            background-color: #387adf;
+            background-color: #ffffff;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
+            border: 1px solid #e9ecef;
         }
         h1 {
             color: #343a40;
@@ -60,7 +58,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="icon">K</div>
+        <div class="icon">
+            <svg width="40" height="27" viewBox="0 0 90 60">
+                <defs><style>.cls-1{fill:#f6461a;}.cls-2{fill:#db342c;}</style></defs>
+                <polygon class="cls-1" points="30 0 0 30 30 60 60 30 90 0 30 0"/>
+                <polygon class="cls-2" points="30 60 60 30 90 60 30 60"/>
+            </svg>
+        </div>
         <h1>You're offline</h1>
         <p>It looks like you've lost your internet connection. Please check your connection and try again.</p>
         <button class="retry-btn" onclick="window.location.reload()">Retry</button>
