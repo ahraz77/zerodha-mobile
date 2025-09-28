@@ -8,12 +8,12 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.png', 'icons/zerodha-kite-app-icon-hd.png', 'icons/*.png'],
       manifest: {
         name: 'Kite',
         short_name: 'Kite',
         description: 'Trading made simple with Kite',
-        theme_color: '#387adf',
+        theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait-primary',

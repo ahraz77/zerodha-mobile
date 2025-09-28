@@ -27,6 +27,34 @@ body {
   height: 100%;
   overflow-x: hidden;
   position: relative;
+  background-color: #ffffff;
+}
+
+/* PWA Standalone mode specific styles */
+@media all and (display-mode: standalone) {
+  html {
+    background-color: #ffffff;
+  }
+  
+  body {
+    background-color: #ffffff;
+  }
+  
+  .mobile-viewport-fix {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Status bar color fix for iOS */
+@supports (-webkit-touch-callout: none) {
+  @media all and (display-mode: standalone) {
+    .mobile-viewport-fix {
+      background-color: #ffffff;
+    }
+  }
 }
 
 #root {
