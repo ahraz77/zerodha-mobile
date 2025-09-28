@@ -13,6 +13,10 @@ export default function App() {
     navigate('/signup');
   };
 
+  const handleTryDemoClick = () => {
+    navigate('/portfolio');
+  };
+
   return (
     <div className="min-h-[100dvh] bg-white overflow-hidden mobile-viewport-fix">
       {/* Universal mobile container - fits all devices from 320px to 430px+ */}
@@ -20,7 +24,9 @@ export default function App() {
         <main className="px-4 xs:px-5 sm:px-6 pt-4 xs:pt-5 sm:pt-6 pb-4 min-h-full flex flex-col safe-area-insets">
           {/* Try demo button */}
           <div className="flex justify-end mb-12 xs:mb-14 sm:mb-16 md:mb-20">
-            <button className="inline-flex items-center gap-1.5 xs:gap-2 border border-blue-500 text-blue-500 rounded px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-2.5 sm:py-3 text-xs xs:text-sm font-normal hover:bg-blue-50 active:bg-blue-100 transition-colors touch-manipulation">
+            <button 
+              onClick={handleTryDemoClick}
+              className="inline-flex items-center gap-1.5 xs:gap-2 border border-blue-500 text-blue-500 rounded px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-2.5 sm:py-3 text-xs xs:text-sm font-normal hover:bg-blue-50 active:bg-blue-100 transition-colors touch-manipulation">
               Try demo
               <ArrowRight className="h-3.5 w-3.5 xs:h-4 xs:w-4" />
             </button>
