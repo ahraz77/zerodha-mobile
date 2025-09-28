@@ -139,14 +139,14 @@ function PortfolioPage() {
       {/* Summary card (changes per tab) */}
       <section className="px-4 mt-4">
         {tab === 'holdings' ? (
-          <div className="bg-white rounded-[12px] shadow-sm px-4 py-4">
+          <div className="bg-white rounded-[8px] shadow-sm px-4 py-4">
             <div className="flex items-center justify-between text-[13px] text-[#6b7280]"><span>Invested</span><span>Current</span></div>
             <div className="mt-2 flex items-center justify-between text-[22px] font-medium text-[#111827]"><span>13,228.55</span><span>15,758.71</span></div>
             <div className="mt-3 h-[1px] bg-[#eef1f5]" />
             <div className="mt-3 flex items-center justify-between"><span className="text-[14px] text-[#6b7280]">P&L</span><div className="flex items-center gap-2 text-[17px] font-medium text-[#34C759]"><span>+2,530.16</span><span className="inline-flex items-center px-2 py-0.5 rounded-[999px] text-[13px] bg-[#EAF7EE] text-[#34C759]">+19.13%</span></div></div>
           </div>
         ) : (
-          <div className="bg-white rounded-[16px] shadow-md px-4 sm:px-6 py-5 sm:py-6 text-center"><div className="text-[18px] leading-6 text-[#9aa3af]">Total P&L</div><div className="mt-2 text-[34px] leading-8 font-semibold text-[#D04C4C]">-273.75</div></div>
+          <div className="bg-white rounded-[8px] shadow-md px-4 sm:px-6 py-5 sm:py-6 text-center"><div className="text-[18px] leading-6 text-[#9aa3af]">Total P&L</div><div className="mt-2 text-[28px] leading-8 font-medium text-[#D04C4C]">-273.75</div></div>
         )}
       </section>
 
