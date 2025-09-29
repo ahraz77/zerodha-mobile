@@ -559,15 +559,13 @@ function BidsPage() {
 
   const TabPills = (
     <div className="px-4 mt-4">
-      <div className="flex justify-center items-center gap-6 text-[15px] font-medium text-[#6b7280]">
+      <div className="flex items-center justify-center gap-6 text-[16px] font-medium text-[#334155]">
         {(['ipo','govt','auctions']).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={`relative flex flex-col items-center ${tab===t?'text-[#2563eb]':''}`}>
-            <span className="flex items-center pb-1">
-              <span className="capitalize">{t === 'ipo' ? 'IPO' : t === 'govt' ? 'Govt. securities' : 'Auctions'}</span>
-              {t==='ipo' && (<span className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[22px] h-[22px] text-[12px] ${tab==='ipo'?'bg-[#c7d2fe] text-[#2563eb]':'bg-[#e5e7eb] text-[#6b7280]'}`}>1</span>)}
-              {t==='auctions' && (<span className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[22px] h-[22px] text-[12px] ${tab==='auctions'?'bg-[#c7d2fe] text-[#2563eb]':'bg-[#e5e7eb] text-[#6b7280]'}`}>18</span>)}
-            </span>
-            {tab===t && <span className="w-8 h-[3px] bg-[#2563eb] rounded-full mt-1"/>}
+          <button key={t} onClick={() => setTab(t)} className={`relative pb-2 transition-colors ${tab===t?'text-[#3D73F1]':''}`}>
+            <span className="align-middle">{t === 'ipo' ? 'IPO' : t === 'govt' ? 'Govt. securities' : 'Auctions'}</span>
+            {t==='ipo' && (<span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[11px] ${tab==='ipo'?'bg-[#dbeafe] text-[#3D73F1]':'bg-[#e5e7eb] text-[#475569]'}`}>1</span>)}
+            {t==='auctions' && (<span className={`ml-2 inline-flex items-center justify-center w-7 h-7 rounded-full text-[11px] ${tab==='auctions'?'bg-[#dbeafe] text-[#3D73F1]':'bg-[#e5e7eb] text-[#475569]'}`}>18</span>)}
+            {tab===t && <span className="absolute -bottom-[3px] left-0 w-10 h-[3px] bg-[#3D73F1] rounded-full" />}
           </button>
         ))}
       </div>
@@ -576,12 +574,13 @@ function BidsPage() {
 
   const SearchRow = (
     <div className="px-4 mt-3">
-      <div className="flex items-center justify-between bg-white rounded-t-[16px] px-3 py-2">
+      <div className="grid grid-cols-[auto_1fr_auto] items-center bg-white rounded-t-[16px] px-3 py-2">
         <div className="flex items-center gap-4"><Icon name="search" className="w-5 h-5 text-[#2563eb]" /><Icon name="sliders" className="w-5 h-5 text-[#2563eb]" /></div>
+        <div />
         {tab==='ipo' ? (
-          <div className="flex gap-2 text-[14px]">
+          <div className="flex gap-1 text-[13px]">
             {(['ongoing','applied','upcoming']).map(s => (
-              <button key={s} onClick={()=>setIpoSub(s)} className={`px-3 h-7 inline-flex items-center rounded-[8px] border ${ipoSub===s?'bg-[#e5edff] text-[#2563eb] border-[#c7d2fe] shadow-inner':'text-[#6b7280] border-transparent hover:bg-[#f3f4f6]'} transition`}>{s[0].toUpperCase()+s.slice(1)}</button>
+              <button key={s} onClick={()=>setIpoSub(s)} className={`px-3 h-6 inline-flex items-center rounded-[8px] ${ipoSub===s?'bg-[#e5edff] text-[#2563eb]':'text-[#6b7280] bg-white hover:bg-[#f9fafb]'} transition-all duration-200`}>{s[0].toUpperCase()+s.slice(1)}</button>
             ))}
           </div>
         ) : <div />}
