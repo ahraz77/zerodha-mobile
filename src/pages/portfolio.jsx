@@ -161,7 +161,7 @@ function PortfolioPage() {
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1 text-[#2563eb]"><Icon name="users" className="w-4 h-4 text-[#2563eb]" /><span className="text-[13px]">Family</span></div>
-              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
+              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
             </div>
           </div>
         ) : (
@@ -172,7 +172,7 @@ function PortfolioPage() {
             </div>
             <div className="flex items-center gap-4">
               <button className="inline-flex items-center gap-1 text-[#2563eb]"><img src="/images/analyze.png" className="w-[18px] h-[18px]" style={{ mixBlendMode: 'multiply' }} alt="Analyze" /><span className="text-[13px]">Analyze</span></button>
-              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/fund_viewS.png" className="w-5 h-5" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
+              <div className="flex items-center gap-1 text-[#2563eb]"><img src="/images/console.svg" className="w-5 h-5" style={{ mixBlendMode: 'multiply' }} alt="Analytics" /><span className="text-[13px]">Analytics</span></div>
             </div>
           </div>
         )}

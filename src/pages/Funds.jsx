@@ -25,7 +25,7 @@ export default function FundsPage() {
         </div>
         <p className="text-2xl font-semibold text-blue-600 mt-1">₹1,00,000.00</p>
         <div className="flex justify-center items-center mt-1 space-x-1">
-          <img src="/images/fund_viewS.png" alt="view icon" className="w-4 h-4" />
+          <img src="/images/console.svg" alt="view icon" className="w-4 h-4" />
           <a href="#" className="text-blue-600 text-sm inline-block hover:underline">View statement</a>
         </div>
       </div>
