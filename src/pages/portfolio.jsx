@@ -368,12 +368,53 @@ function OrdersPage() {
     <div className="px-4 mt-3">
       <div className="flex items-center justify-between bg-white rounded-t-[16px] px-3 py-2">
         <div className="flex items-center gap-4">
-          <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
-          <Icon name="sliders" className="w-5 h-5 text-[#2563eb]" />
+          {(tab === 'open' || tab === 'executed' || tab === 'gtt' || tab === 'alerts') && (
+            <>
+              <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
+              <Icon name="sliders" className="w-5 h-5 text-[#2563eb]" />
+            </>
+          )}
+          {tab === 'baskets' && (
+            <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
+          )}
+          {tab === 'sips' && (
+            <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
+          )}
         </div>
-        <div className="flex items-center gap-2 text-[#2563eb]">
-          <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
-          <span className="text-[13px]">Tradebook</span>
+        <div className="flex items-center gap-4 text-[#2563eb]">
+          {tab === 'executed' && (
+            <>
+              <div className="flex items-center gap-2">
+                <Icon name="file-text" className="w-4 h-4 text-[#2563eb]" />
+                <span className="text-[13px]">Contract note</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
+                <span className="text-[13px]">Tradebook</span>
+              </div>
+            </>
+          )}
+          {tab === 'open' && (
+            <>
+              <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
+              <span className="text-[13px]">Tradebook</span>
+            </>
+          )}
+          {tab === 'alerts' && (
+            <>
+              <span className="text-[13px] text-[#2563eb]">+ New alert</span>
+            </>
+          )}
+          {tab === 'baskets' && (
+            <>
+              <span className="text-[13px] text-[#2563eb]">+ New basket</span>
+            </>
+          )}
+          {tab === 'sips' && (
+            <>
+              <span className="text-[13px] text-[#2563eb]">+ New SIP</span>
+            </>
+          )}
         </div>
       </div>
     </div>
