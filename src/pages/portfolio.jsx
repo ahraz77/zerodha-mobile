@@ -620,7 +620,7 @@ function ProfilePage() {
       <header className="px-4 pt-4 bg-[#eff1f5]">
         <div className="flex items-center justify-between">
           <div>
-            <div className="text-[20px] text-[#0f172a] font-medium">Mahammad Sayad</div>
+            <div className="text-[20px] text-[#0f172a] font-medium">Ahraz</div>
           </div>
           <div className="flex items-center gap-5">
             <Icon name="shopping-cart" className="w-6 h-6 text-[#374151]" />
@@ -635,9 +635,9 @@ function ProfilePage() {
           <div className="flex items-start justify-between">
             <div>
               <div className="text-[16px] font-medium text-[#0f172a]">FJP018</div>
-              <div className="text-[13px] text-[#9aa3af]">sahadsaad186@gmail.com</div>
+              <div className="text-[13px] text-[#9aa3af]">ahraz@gmail.com</div>
             </div>
-            <div className="w-10 h-10 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[14px] text-[#334155]">MS</div>
+            <div className="w-10 h-10 rounded-full bg-[#e5e7eb] flex items-center justify-center text-[14px] text-[#334155]">AZ</div>
           </div>
           <div className="mt-4 flex items-center justify-between">
             <div className="text-[14px] text-[#6b7280]">Privacy mode</div>
