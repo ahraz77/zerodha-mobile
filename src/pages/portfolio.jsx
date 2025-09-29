@@ -366,9 +366,15 @@ function OrdersPage() {
 
   const SearchRow = (
     <div className="px-4 mt-3">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center bg-white rounded-t-[16px] px-3 py-2">
-        <div className="flex items-center gap-4"><Icon name="search" className="w-6 h-6 text-[#2563eb]" /><Icon name="sliders" className="w-6 h-6 text-[#2563eb]" /></div>
-        {(tab==='open'||tab==='gtt'||tab==='executed') && <div />}
+      <div className="flex items-center justify-between bg-white rounded-t-[16px] px-3 py-2">
+        <div className="flex items-center gap-4">
+          <Icon name="search" className="w-5 h-5 text-[#2563eb]" />
+          <Icon name="sliders" className="w-5 h-5 text-[#2563eb]" />
+        </div>
+        <div className="flex items-center gap-2 text-[#2563eb]">
+          <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
+          <span className="text-[13px]">Tradebook</span>
+        </div>
       </div>
     </div>
   );
