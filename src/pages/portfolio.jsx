@@ -114,14 +114,14 @@ function PortfolioPage() {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl sm:text-3xl leading-8 font-semibold text-[#0f172a]">Portfolio</h1>
           <div className="flex items-center gap-5">
-            <Icon name="shopping-cart" className="w-7 h-7 text-[#374151]" />
-            <Icon name="chevron-down" className="w-7 h-7 text-[#374151]" />
+            <Icon name="shopping-cart" className="w-6 h-6 text-[#374151]" />
+            <Icon name="chevron-down" className="w-6 h-6 text-[#374151]" />
           </div>
         </div>
       </header>
 
       {/* Tabs */}
-      <div className="px-4 mt-3">
+      <div className="px-4 mt-4">
         <div className="flex items-center justify-center gap-6 text-[16px] font-medium text-[#334155]">
           <button onClick={() => setTab('holdings')} className={`relative pb-2 transition-colors ${tab === 'holdings' ? 'text-[#3D73F1]' : ''}`}>
             <span className="align-middle">Holdings</span>
@@ -256,14 +256,14 @@ function WatchlistPage() {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl sm:text-3xl leading-8 font-semibold text-[#0f172a]">Watchlist</h1>
           <div className="flex items-center gap-5">
-            <Icon name="shopping-cart" className="w-7 h-7 text-[#374151]" />
-            <Icon name="chevron-down" className="w-7 h-7 text-[#374151]" />
+            <Icon name="shopping-cart" className="w-6 h-6 text-[#374151]" />
+            <Icon name="chevron-down" className="w-6 h-6 text-[#374151]" />
           </div>
         </div>
       </header>
 
       {/* Top tabs */}
-      <div className="px-4 mt-3">
+      <div className="px-4 mt-4">
         <div className="flex items-center gap-6 text-[16px] font-medium text-[#374151]">
           {([
             {key:'favorites', label:'Favorites'}, {key:'my', label:'My list'}
@@ -317,17 +317,17 @@ function OrdersPage() {
       <div className="flex items-center justify-between">
         <h1 className="text-2xl sm:text-3xl leading-8 font-semibold text-[#0f172a]">Orders</h1>
         <div className="flex items-center gap-5">
-          <Icon name="shopping-cart" className="w-7 h-7 text-[#374151]" />
-          <Icon name="chevron-down" className="w-7 h-7 text-[#374151]" />
+          <Icon name="shopping-cart" className="w-6 h-6 text-[#374151]" />
+          <Icon name="chevron-down" className="w-6 h-6 text-[#374151]" />
         </div>
       </div>
     </header>
   );
 
   const TopTabs = (
-    <div className="px-4 mt-3">
+    <div className="px-4 mt-4">
       <div
-        className="flex items-center gap-6 text-[18px] font-medium text-[#374151] overflow-x-auto whitespace-nowrap -mx-4 px-4"
+        className="flex items-center gap-6 text-[16px] font-medium text-[#6b7280] overflow-x-auto whitespace-nowrap -mx-4 px-4"
         style={{ 
           WebkitOverflowScrolling: 'touch',
           scrollbarWidth: 'none',
@@ -345,18 +345,18 @@ function OrdersPage() {
           <button
             key={t.k}
             onClick={() => setTab(t.k)}
-            className={`relative pb-2 shrink-0 ${tab === t.k ? 'text-[#2563eb]' : ''}`}
+            className={`relative pb-3 shrink-0 ${tab === t.k ? 'text-[#2563eb]' : 'text-[#6b7280]'}`}
           >
             {t.l}
             <span
-              className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[22px] h-[22px] text-[12px] ${
-                tab === t.k ? 'bg-[#c7d2fe] text-[#2563eb]' : 'bg-[#e5e7eb] text-[#6b7280]'
+              className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[20px] h-[20px] text-[11px] ${
+                tab === t.k ? 'bg-[#dbeafe] text-[#2563eb]' : 'bg-[#e5e7eb] text-[#6b7280]'
               }`}
             >
               {t.n}
             </span>
             {tab === t.k && (
-              <span className="absolute -bottom-[3px] left-0 w-8 h-[3px] bg-[#2563eb] rounded-full" />
+              <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#2563eb]" />
             )}
           </button>
         ))}
@@ -385,18 +385,18 @@ function OrdersPage() {
           {tab === 'executed' && (
             <>
               <div className="flex items-center gap-2">
-                <Icon name="file-text" className="w-4 h-4 text-[#2563eb]" />
+                <Icon name="file-text" className="w-3 h-3 text-[#2563eb]" />
                 <span className="text-[13px]">Contract note</span>
               </div>
               <div className="flex items-center gap-2">
-                <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
+                <img src="/images/console.svg" className="w-3 h-3" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
                 <span className="text-[13px]">Tradebook</span>
               </div>
             </>
           )}
           {tab === 'open' && (
             <>
-              <img src="/images/console.svg" className="w-4 h-4" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
+              <img src="/images/console.svg" className="w-3 h-3" style={{ mixBlendMode: 'multiply' }} alt="Tradebook" />
               <span className="text-[13px]">Tradebook</span>
             </>
           )}
@@ -550,24 +550,24 @@ function BidsPage() {
       <div className="flex items-center justify-between">
         <h1 className="text-2xl sm:text-3xl leading-8 font-semibold text-[#0f172a]">Bids</h1>
         <div className="flex items-center gap-5">
-          <Icon name="shopping-cart" className="w-7 h-7 text-[#374151]" />
-          <Icon name="chevron-down" className="w-7 h-7 text-[#374151]" />
+          <Icon name="shopping-cart" className="w-6 h-6 text-[#374151]" />
+          <Icon name="chevron-down" className="w-6 h-6 text-[#374151]" />
         </div>
       </div>
     </header>
   );
 
   const TabPills = (
-    <div className="px-4 mt-3">
-      <div className="flex justify-center items-center gap-6 sm:gap-12 text-[18px] font-medium text-[#374151]">
+    <div className="px-4 mt-4">
+      <div className="flex justify-center items-center gap-6 text-[15px] font-medium text-[#6b7280]">
         {(['ipo','govt','auctions']).map((t) => (
-          <button key={t} onClick={() => setTab(t)} className={`relative pb-2 flex flex-col items-center ${tab===t?'text-[#2563eb]':''}`}>
-            <span className="flex items-center">
+          <button key={t} onClick={() => setTab(t)} className={`relative flex flex-col items-center ${tab===t?'text-[#2563eb]':''}`}>
+            <span className="flex items-center pb-1">
               <span className="capitalize">{t === 'ipo' ? 'IPO' : t === 'govt' ? 'Govt. securities' : 'Auctions'}</span>
               {t==='ipo' && (<span className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[22px] h-[22px] text-[12px] ${tab==='ipo'?'bg-[#c7d2fe] text-[#2563eb]':'bg-[#e5e7eb] text-[#6b7280]'}`}>1</span>)}
               {t==='auctions' && (<span className={`ml-2 inline-flex items-center justify-center rounded-full min-w-[22px] h-[22px] text-[12px] ${tab==='auctions'?'bg-[#c7d2fe] text-[#2563eb]':'bg-[#e5e7eb] text-[#6b7280]'}`}>18</span>)}
             </span>
-            {tab===t && <span className="absolute -bottom-[3px] left-1/2 -translate-x-1/2 w-8 h-[3px] bg-[#2563eb] rounded-full"/>}
+            {tab===t && <span className="w-8 h-[3px] bg-[#2563eb] rounded-full mt-1"/>}
           </button>
         ))}
       </div>
@@ -576,16 +576,15 @@ function BidsPage() {
 
   const SearchRow = (
     <div className="px-4 mt-3">
-      <div className="grid grid-cols-[auto_1fr_auto] items-center bg-white rounded-t-[16px] px-3 py-2">
-        <div className="flex items-center gap-4"><Icon name="search" className="w-6 h-6 text-[#2563eb]" /><Icon name="sliders" className="w-6 h-6 text-[#2563eb]" /></div>
+      <div className="flex items-center justify-between bg-white rounded-t-[16px] px-3 py-2">
+        <div className="flex items-center gap-4"><Icon name="search" className="w-5 h-5 text-[#2563eb]" /><Icon name="sliders" className="w-5 h-5 text-[#2563eb]" /></div>
         {tab==='ipo' ? (
-          <div className="justify-self-center flex gap-2 text-[15px]">
+          <div className="flex gap-2 text-[14px]">
             {(['ongoing','applied','upcoming']).map(s => (
-              <button key={s} onClick={()=>setIpoSub(s)} className={`px-4 h-8 inline-flex items-center rounded-[10px] border ${ipoSub===s?'bg-[#e5edff] text-[#2563eb] border-[#c7d2fe] shadow-inner':'text-[#6b7280] border-transparent hover:bg-[#f3f4f6]'} transition`}>{s[0].toUpperCase()+s.slice(1)}</button>
+              <button key={s} onClick={()=>setIpoSub(s)} className={`px-3 h-7 inline-flex items-center rounded-[8px] border ${ipoSub===s?'bg-[#e5edff] text-[#2563eb] border-[#c7d2fe] shadow-inner':'text-[#6b7280] border-transparent hover:bg-[#f3f4f6]'} transition`}>{s[0].toUpperCase()+s.slice(1)}</button>
             ))}
           </div>
         ) : <div />}
-        <div />
       </div>
     </div>
   );
